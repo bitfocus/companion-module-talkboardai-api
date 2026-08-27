@@ -1,0 +1,48 @@
+{
+	"$schema": "../node_modules/@companion-module/base/assets/manifest.schema.json",
+	"type": "connection",
+	"id": "talkboardai-api",
+	"name": "TalkBoard",
+	"shortname": "TalkBoard",
+	"description": "Fire TalkBoard macros — multi-parameter and multi-stage console moves — from Companion buttons",
+	"version": "0.1.0",
+	"license": "MIT",
+	"repository": "git+https://github.com/bitfocus/companion-module-talkboardai-api.git",
+	"bugs": "https://github.com/bitfocus/companion-module-talkboardai-api/issues",
+	"maintainers": [
+		{
+			"name": "John Somers",
+			"email": "john@somersaudio.com"
+		}
+	],
+	"runtime": {
+		"type": "node22",
+		"api": "nodejs-ipc",
+		"apiVersion": "2.0.4",
+		"entrypoint": "../dist/main.js"
+	},
+	"legacyIds": [],
+	"manufacturer": "TalkBoard.ai",
+	"products": [
+		"Console Control"
+	],
+	"keywords": [
+		"talkboard",
+		"audio",
+		"mixer",
+		"mixing console",
+		"macro",
+		"x32",
+		"m32",
+		"wing",
+		"yamaha",
+		"allen-heath"
+	],
+	"bonjourQueries": {
+		"bonjour_host": {
+			"type": "talkboard",
+			"protocol": "tcp",
+			"addressFamily": "ipv4"
+		}
+	}
+}

@@ -1,0 +1,13 @@
+# Bitfocus's own module checks — the same validation the store reviewers run.
+# Kept here so a broken manifest or build fails on push rather than in review.
+name: Companion Module Checks
+
+on:
+  push:
+
+jobs:
+  check:
+    name: Check module
+    permissions:
+      packages: read
+    uses: bitfocus/actions/.github/workflows/module-checks.yaml@main
